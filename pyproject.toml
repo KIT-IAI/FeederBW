@@ -1,0 +1,17 @@
+[project]
+name = "feederbw"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "zenodo-get",
+    "requests",
+    "polars",
+    "scikit-learn",
+    "matplotlib",
+    "ipykernel",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
