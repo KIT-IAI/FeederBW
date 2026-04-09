@@ -5,6 +5,8 @@ This is a companion repository for exploring the **FeederBW dataset** — two ye
 📄 **Preprint:** [arXiv:2602.03521](https://arxiv.org/abs/2602.03521)  
 📦 **Dataset:** [Zenodo Record 17831177](https://zenodo.org/records/17831177)
 
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
 ## Dataset Overview
 
 | Source | Resolution | Description |
@@ -141,3 +143,19 @@ If you use this dataset, preprint or code, please cite:
 	keywords = {Electrical Engineering and Systems Science - Systems and Control},
 }
 ```
+
+## License
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+
+Author: Manuel Treutlein
+
+Contact: see corresponding e-mails in [ preprint arXiv:2602.03521](https://arxiv.org/abs/2602.03521)  
