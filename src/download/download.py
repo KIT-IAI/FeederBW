@@ -6,7 +6,7 @@ from zenodo_get import zget
 
 from src.config import DATA_DIR
 
-ZENODO_RECORD_ID = "17831177"
+ZENODO_RECORD_ID = "19550073"  # NOTE(m): this is version v1.1 
 ZENODO_CONCEPT_ID = "17831176"
 
 VALID_MEASUREMENT_RANGES = ("001-040", "041-080", "081-120", "121-160", "161-200")
