@@ -2,7 +2,8 @@
 
 This is a companion repository for exploring the **FeederBW dataset** — two years of 1-minute resolution measurements from 200 low-voltage distribution feeders in Baden-Württemberg, Germany.
 
-📄 **Preprint:** [arXiv:2602.03521](https://arxiv.org/abs/2602.03521)  
+
+📄 **Publication** Nature Scientific Data [https://www.nature.com/articles/s41597-026-08152-9](https://www.nature.com/articles/s41597-026-08152-9) (Preprint, outdated: [arXiv:2602.03521](https://arxiv.org/abs/2602.03521))  
 📦 **Dataset:** [Zenodo Record 17831177](https://zenodo.org/records/17831177)
 
 ## Dataset Overview
@@ -127,20 +128,7 @@ uv run pytest src/tests/
 
 If you use this dataset, preprint or code, please cite:
 
-```bibtex
-@misc{treutlein_real-world_2026,
-	title = {Real-world energy data of 200 feeders from low-voltage grids with metadata in Germany over two years},
-	url = {http://arxiv.org/abs/2602.03521},
-	doi = {10.48550/arXiv.2602.03521},
-	number = {{arXiv}:2602.03521},
-	publisher = {{arXiv}},
-	author = {Treutlein, Manuel and Bothe, Pascal and Schmidt, Marc and Hahn, Roman and Neumann, Oliver and Mikut, Ralf and Hagenmeyer, Veit},
-	date = {2026-02-03},
-	eprinttype = {arxiv},
-	eprint = {2602.03521 [eess]},
-	keywords = {Electrical Engineering and Systems Science - Systems and Control},
-}
-```
+Treutlein, M., Bothe, P., Schmidt, M. et al. Real-world energy data of 200 feeders from low-voltage grids with metadata in Germany over two years. Sci Data 13, 1283 (2026). https://doi.org/10.1038/s41597-026-08152-9
 
 ## License
 
