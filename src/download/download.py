@@ -23,6 +23,7 @@ def download_data(
     version: str | None = None,
     output_dir: str | Path = DATA_DIR,
     overwrite: bool = False,
+    additive: bool = False,
 ) -> None:
     """Download FeederBW dataset files from Zenodo.
 
@@ -35,13 +36,16 @@ def download_data(
         output_dir: Directory to store downloaded files. Created if it doesn't exist.
         overwrite: If True, removes existing data before downloading. If False and
             the directory is not empty, stops with a message.
+        additive: If True, keeps existing data untouched and only downloads the
+            requested files that are not yet present. Takes precedence over
+            overwrite.
     """
     import shutil
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    if any(f for f in output_dir.iterdir() if f.name != ".gitkeep"):
+    if not additive and any(f for f in output_dir.iterdir() if f.name != ".gitkeep"):
         if not overwrite:
             print(
                 f"'{output_dir}' is not empty. Set overwrite=True to remove existing "
@@ -61,11 +65,13 @@ def download_data(
                 f"Valid options: {list(FILE_MAP.keys())}"
             )
 
-    if files is None:
+    if files is None and not additive:
         zget.download(record_or_doi=record_id, output_dir=output_dir)
     else:
-        for file_id in files:
+        for file_id in files if files is not None else FILE_MAP:
             filename = FILE_MAP[file_id]
+            if additive and _is_present(output_dir, filename):
+                continue
             zget.download(
                 record_or_doi=record_id,
                 output_dir=output_dir,
@@ -73,6 +79,13 @@ def download_data(
             )
 
     _unzip_and_cleanup(output_dir)
+
+
+def _is_present(output_dir: Path, filename: str) -> bool:
+    # Zips are removed after extraction, so check for the extracted folder as well.
+    return (output_dir / filename).exists() or (
+        output_dir / filename.removesuffix(".zip")
+    ).exists()
 
 
 def _resolve_record_id(version: str | None) -> str:
