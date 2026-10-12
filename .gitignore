@@ -42,3 +42,6 @@ data/*
 data/**/*
 !data/zenodo/
 !data/zenodo/.gitkeep
+!data/zenodo/feeder_measurement_data_001-040/
+!data/zenodo/feeder_measurement_data_001-040/feeder_033.parquet
+!data/zenodo/feeder_measurement_data_001-040/feeder_037.parquet
