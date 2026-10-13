@@ -120,7 +120,7 @@ def _plot_forecast(
 
     feeders = eval_df["feeder"].unique().to_list()
     pairs = [(f, d) for f in feeders for d in test_days]
-    selected = random.sample(pairs, min(9, len(pairs)))
+    selected = sorted(random.sample(pairs, min(9, len(pairs))))
 
     fig, axes = plt.subplots(3, 3, figsize=(18, 12))
     axes_flat = axes.flatten()
