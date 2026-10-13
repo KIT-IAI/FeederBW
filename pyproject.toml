@@ -9,6 +9,7 @@ dependencies = [
     "scikit-learn",
     "matplotlib",
     "ipykernel",
+    "chronos-forecasting",
 ]
 
 [dependency-groups]
